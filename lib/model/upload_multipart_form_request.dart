@@ -26,7 +26,7 @@ class UploadMultipartFormRequest {
   ///
   String? contentTypeHeader;
 
-  MultipartFile file;
+  MultipartFile? file;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UploadMultipartFormRequest &&
@@ -49,7 +49,7 @@ class UploadMultipartFormRequest {
     } else {
       json[r'contentTypeHeader'] = null;
     }
-      json[r'file'] = this.file;
+    json[r'file'] = this.file;
     return json;
   }
 
@@ -65,8 +65,10 @@ class UploadMultipartFormRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UploadMultipartFormRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UploadMultipartFormRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "UploadMultipartFormRequest[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "UploadMultipartFormRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -79,7 +81,10 @@ class UploadMultipartFormRequest {
     return null;
   }
 
-  static List<UploadMultipartFormRequest> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<UploadMultipartFormRequest> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <UploadMultipartFormRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -107,13 +112,19 @@ class UploadMultipartFormRequest {
   }
 
   // maps a json object with a list of UploadMultipartFormRequest-objects as value to a dart map
-  static Map<String, List<UploadMultipartFormRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<UploadMultipartFormRequest>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<UploadMultipartFormRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = UploadMultipartFormRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = UploadMultipartFormRequest.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
@@ -124,4 +135,3 @@ class UploadMultipartFormRequest {
     'file',
   };
 }
-

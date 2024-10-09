@@ -167,7 +167,7 @@ class ImapServerSearchOptions {
         sentBefore: mapDateTime(json, r'sentBefore', ''),
         header: json[r'header'] == null
           ? const {}
-            : mapCastOfType<String, List>(json, r'header'),
+            : mapCastOfType<String, List<String>>(json, r'header'),
         body: json[r'body'] is List
             ? (json[r'body'] as List).cast<String>()
             : const [],
