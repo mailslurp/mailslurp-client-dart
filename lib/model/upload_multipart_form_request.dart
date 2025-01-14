@@ -26,7 +26,7 @@ class UploadMultipartFormRequest {
   ///
   String? contentTypeHeader;
 
-  MultipartFile file;
+  MultipartFile? file;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UploadMultipartFormRequest &&

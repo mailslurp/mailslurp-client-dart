@@ -374,7 +374,7 @@ class Email {
         headers: mapCastOfType<String, String>(json, r'headers') ?? const {},
         headersMap: json[r'headersMap'] == null
           ? const {}
-            : mapCastOfType<String, List>(json, r'headersMap'),
+            : mapCastOfType<String, List<String>>(json, r'headersMap'),
         attachments: json[r'attachments'] is List
             ? (json[r'attachments'] as List).cast<String>()
             : const [],
