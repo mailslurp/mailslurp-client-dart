@@ -9,8 +9,8 @@ homepage: 'https://www.mailslurp.com'
 environment:
   sdk: '>=3.4.0'
 dependencies:
-  dio: '>=5.4.0'
-  intl: '>=0.19.0'
-  meta: '^1.1.8'
+  http: ^1.2.2
+  intl: '^0.19.0'
+  meta: '^1.16.0'
 dev_dependencies:
   test: '>=1.16.0 <1.18.0'
