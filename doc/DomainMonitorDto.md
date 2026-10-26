@@ -1,0 +1,28 @@
+# mailslurp.model.DomainMonitorDto
+
+## Load the model package
+```dart
+import 'package:mailslurp/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**userId** | **String** |  | 
+**domain** | **String** |  | 
+**name** | **String** |  | [optional] 
+**intervalSeconds** | **int** |  | [optional] 
+**enabled** | **bool** |  | 
+**schedulingEnabled** | **bool** |  | 
+**lastStatus** | **String** |  | [optional] 
+**healthScore** | **int** |  | [optional] 
+**lastRunAt** | [**DateTime**](DateTime) |  | [optional] 
+**nextRunAt** | [**DateTime**](DateTime) |  | [optional] 
+**emailVerification** | [**DomainMonitorEmailVerificationDto**](DomainMonitorEmailVerificationDto) |  | [optional] 
+**createdAt** | [**DateTime**](DateTime) |  | 
+**updatedAt** | [**DateTime**](DateTime) |  | 
+
+[[Back to Model list]](../README#documentation-for-models) [[Back to API list]](../README#documentation-for-api-endpoints) [[Back to README]](../README)
+
+
